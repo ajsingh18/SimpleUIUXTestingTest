@@ -203,20 +203,41 @@ namespace SimpleUIUXTestingTest
         }
 
 
+        //assuming that (0,0) would be the cell that contains 'First Name' therefore (2,2) should be the age of 12
         [Test, Order(6)]
         public void TestSix()
         {
-            Trace.WriteLine("------------------Test Six-----------------------------------");
+            string response = "";
+            int x = 2;
+            int y = 2;
 
             driver.Url = "https://medo.ai/career/test-challenge/index.html";
 
-            FindCell(2, 2);
+            Trace.WriteLine("------------------Test Six-----------------------------------");
+
+            response = FindCell(x, y);
+
+            Trace.WriteLine("Value in cell ("+x+","+y+") is " + response);
+
+            x = 2;
+            y = 3;
+
+            response = FindCell(x, y);
+
+            if(response == "45")
+            {
+                Trace.WriteLine("Cell (3,3) has value of " + response);
+            }
+            else
+            {
+                Trace.WriteLine("Cell (3,3) does not contain the value 45");
+            }
 
             Trace.WriteLine("------------------Test Six-----------------------------------");
         }
 
 
-        public void FindCell(int x, int y)
+        public string FindCell(int x, int y)
         {
 
             var table = driver.FindElement(By.TagName("table"));
@@ -230,10 +251,12 @@ namespace SimpleUIUXTestingTest
                 {
                     if (row == y && cell == x)
                     {
-                        Trace.WriteLine("Cell value is: " + rowTds[cell].Text);
+                        return rowTds[cell].Text;
                     }
                 }
             }
+
+            return "Could not find cell";
         }
 
 
