@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Ajay Singh 
+//02-22-2020
+//Medo.ai coding examination
+
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +14,13 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
 using System.Diagnostics;
+
+//need to install following nuget packages
+//Install-Package Selenium.WebDriver -Version 3.141.0
+//Install-Package NUnit -Version 3.12.0
+//Install-Package NUnit3TestAdapter -Version 3.16.1
+
+//When testing please select all tests in test explorer and right click and select debug selected tests. Assertion output will appear in Debug output window.
 
 namespace SimpleUIUXTestingTest
 {
