@@ -4,7 +4,7 @@ Part 2 of Medo.ai programming examination
 Ajay Singh
 02-22-2020
 
-Tests are located at -> SimpleUIUXTestingTest/blob/master/SimpleUIUXTestingTest/UnitTest1.cs
+Tests are located at -> SimpleUIUXTestingTest/UnitTest1.cs
 
 Using the Selenium framework with NUnit to allow for easier testing.
 
